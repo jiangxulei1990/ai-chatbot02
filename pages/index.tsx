@@ -10,7 +10,7 @@ function Home() {
       </section>
 
       <section className="flex flex-col gap-3">
-        <Text variant="h2">小蚁同学-AI助手</Text>
+        <Text variant="h2">小蚁同学AI助手-Beta</Text>
         <div className="lg:w-2/3">
           <Chat />
         </div>
