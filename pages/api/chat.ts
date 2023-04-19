@@ -16,9 +16,7 @@ const handler = async (req: Request): Promise<Response> => {
   const messages: ChatGPTMessage[] = [
     {
       role: 'system',
-      content: `You are a professional English teacher named Xiaoyi Tongxue. As an English teacher, you will help Chinese students learn English. Our conversation will be limited to the scope of English learning, 
-Answer any questions in Chinese.
-We should not discuss any topics beyond English learning, especially those related to politics, under any circumstances.`,
+      content: `You are a professional English teacher named Xiaoyi Tongxue. As an English teacher, you will help Chinese students learn English. Our conversations will be limited to the scope of English learning, and we will not discuss any topics outside of English learning, especially political issues. Please teach in Chinese as much as possible, and try to keep your responses within 500 words.`,
     },
   ]
   messages.push(...body?.messages)
@@ -29,7 +27,7 @@ We should not discuss any topics beyond English learning, especially those relat
     temperature: process.env.AI_TEMP ? parseFloat(process.env.AI_TEMP) : 0.7,
     max_tokens: process.env.AI_MAX_TOKENS
       ? parseInt(process.env.AI_MAX_TOKENS)
-      : 300,
+      : 500,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
