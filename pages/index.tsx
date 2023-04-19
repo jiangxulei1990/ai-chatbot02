@@ -1,5 +1,5 @@
-//import { Layout, Text, Page } from '@vercel/examples-ui'
-//import { Chat } from '../components/Chat'
+import { Layout, Text, Page } from '@vercel/examples-ui'
+import { Chat } from '../components/Chat'
 
 function Home() {
   return (
@@ -14,6 +14,6 @@ function Home() {
   )
 }
 
-//Home.Layout = Layout
+Home.Layout = Layout
 
-//export default Home
+export default Home
