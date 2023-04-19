@@ -9,7 +9,8 @@ const COOKIE_NAME = 'nextjs-example-ai-chat-gpt3'
 export const initialMessages: ChatGPTMessage[] = [
   {
     role: 'assistant',
-    content: 'Hi! I am a friendly AI assistant. Ask me anything!',
+    content: 'Hi Michael，我是你的专属学习助手小蚁，我会在这里为你提供英语学习帮助。请问您想从哪方面开始学习？例如语法、阅读理解、写作、备考技巧等，还能与我进行英语对话练习哦~
+',
   },
 ]
 
@@ -39,7 +40,7 @@ const InputMessage = ({ input, setInput, sendMessage }: any) => (
         setInput('')
       }}
     >
-      Say
+      发送
     </Button>
   </div>
 )
@@ -123,7 +124,7 @@ export function Chat() {
 
       {messages.length < 2 && (
         <span className="mx-auto flex flex-grow text-gray-600 clear-both">
-          Type a message to start the conversation
+          请在输入框中挥洒你的问题吧
         </span>
       )}
       <InputMessage
